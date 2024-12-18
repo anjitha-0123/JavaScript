@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let a=12;
+        let b="Hai"
+        let c=true;
+        let d=null;
+       
+        let e=25;
+        let f=7;
+        document.write("The value of a is:",a);
+        document.write("<br>The value of b is:",b);
+        document.write("<br>The value of c is:",c);
+        document.write("<br>The value of d is",d);
+
+        document.getElementById("demo").innerHTML="25 years 7 months"
+
+        const m=5;
+        document.write("<br><br>The value of m is ",m);
+        a=20;//reinitilization is possible
+        //m=6// for const reinitilisation is not possible
+    
+        {   
+            a=15;//for let both redecleration and reinitilization is possible
+            document.write("<br>The value of a is",a);
+            const m=6;//iniside block redecleration is possible
+            document.write("<br>THe value of m is :",m)
+        }
+        document.write("<br>The value of a is",a);
+
+        s=a<e
+        document.write("<br>",s)
+
+       
+
+
+
+    </script>
+    
+</body>
+</html>

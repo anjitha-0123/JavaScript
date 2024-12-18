@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo1">Hello</p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
+    <P id="demo9"></P>
+    <p id="demo10"></p>
+    <p id="demo11"></p>
+    <p id="demo12"></p>
+    <p id="demo13"></p>
+    <p id="demo14"></p>
+
+    <script>
+        //Program to swap two numbers using a temporary variable
+        let a=10;
+        let b=12;
+        let t=0;
+        document.getElementById("demo1").innerHTML=`The value of a is ${a} and the value of b is ${b}`
+    
+         t=a;
+         a=b;
+         b=t;
+        document.getElementById("demo2").innerHTML=`The value of a is ${a} and the value of b is ${b}`
+
+       //Program to swap two numbers w/o using temporary variable
+       //let c=21;
+       //let d=23;
+       //document.getElementById("demo3").innerHTML=`The value of a is 
+
+       //Program to convert Celsius to fahrenheit
+       let e=23;
+       F=e*(9/5)+32
+       document.getElementById("demo4").innerHTML=`The fahrenheit value of ${e} degree celsius is ${F}`;
+
+       //Program to find square of a number
+       let g=5;
+       s=g*g;
+       document.getElementById("demo5").innerHTML=`The square of number ${g} is ${s}`;
+
+       //Program to find cube of a number
+       let h=3;
+       C=h*h*h;
+       document.getElementById("demo6").innerHTML=`The cube of number ${h} is ${C}`;
+
+       //AREA
+       //Program to find area of square
+       let A=8;
+       S=A*A;
+       document.getElementById("demo7").innerHTML=`The area of square with side ${A}cm is ${S}`;
+
+       //Program to find area of circle
+       let r=4;
+       const pie=3.14;
+       Ci=pie*r*r
+       document.getElementById("demo8").innerHTML=`The area of circle having radius is ${r} is ${Ci}`;
+
+       //Program to find area of rectangle
+       let L=12;
+       let B=6;
+       document.write("The area of rectangle having length ",+L," and breadth ",+B," is ",L*B);
+
+       //Program to find area of triangle
+       let H=12;
+       let Ba=8;
+       AT=(1/2)*Ba*H
+       document.getElementById("demo9").innerHTML=` area of triangle having base ${Ba} and height ${H} is ${AT}`;
+
+      //Perimeter
+      // Program to find perimeter of  square
+      Ps=4*A
+      document.getElementById("demo10").innerHTML=`The perimeter of square with side ${A}cm is ${Ps}`;
+      // Program to find perimeter of rectangle
+      Pr=2*(L+B)
+      document.getElementById("demo11").innerHTML=`The perimeter of rectangle with length ${L}and breadth ${B} is ${Pr}`;
+      // Program to find perimeter of  circle
+      Pc=2*pie*r;
+      document.getElementById("demo12").innerHTML=`The perimeter of circle having radius is ${r} is ${Pc}`;
+      // Program to find perimeter of  triangle
+     let s1=3;
+     let s2=4;
+     let s3=5;
+     Pt=s1+s2+s3;
+     document.getElementById("demo13").innerHTML=` The perimeter of triangle having sides ${s1},${s2},${s3} is ${Pt}`;
+     
+     //Interst
+     //Program to find simple interest & compound interest
+    let P=1000;
+    let R=8;
+    let T=2;
+    SI=(P*R*T)/100;
+    document.write("The simple interst for principle amount 1000 and rate of interest 8% in 2 years is ",SI);
+    TA=P*(1+R/100)^T;
+    CI=TA-P;
+    document.write("<br><br>The compound interst for principle amount 1000 and rate of interest 8% in 2 years is ",CI);
+
+    //Program to find largest among two numbers
+    let num1=18;
+    let num2=20;
+    large=num1<num2?num2:num1;
+    document.write("<br><br>The largest number among 18 and 20 is ", large);
+    //program to find smallest among three numbers
+    let num3=32;
+    large=num1<num2?num1:num2;
+    small=num3<large?num3:large;
+    document.write("<br><br>The smallest number among 18 and 20 is ",small);
+
+     //Program to check the given number is zero,positive and negative
+     let N=1;
+     m=N<0?"negative":"positive";
+     document.write("<br><br>The given number is ",m);
+     
+
+     //Program to find whether the person is eligible for voting using ternary operator
+     let age=19;
+     el=age>18?"eligible":"not eligible";
+     document.getElementById(demo14).innerHTML=`The person is ${el} for voting`;
+
+     //JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80 return 65 otherwise return 80 (using ternary operator).
+
+     let x=30;
+     let y=29;
+     sum=x+y;
+     document.write("The sum of two numbers is",sum);
+     check=sum
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>
