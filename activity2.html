@@ -20,6 +20,8 @@
     <p id="demo12"></p>
     <p id="demo13"></p>
     <p id="demo14"></p>
+    <p id="demo15"></p>
+
 
     <script>
         //Program to swap two numbers using a temporary variable
@@ -34,9 +36,13 @@
         document.getElementById("demo2").innerHTML=`The value of a is ${a} and the value of b is ${b}`
 
        //Program to swap two numbers w/o using temporary variable
-       //let c=21;
-       //let d=23;
-       //document.getElementById("demo3").innerHTML=`The value of a is 
+       let c=21;
+       let d=23;
+       document.getElementById("demo15").innerHTML=`The value of c is ${c} and the value of d is ${d}`;
+       c=d-c;
+       d=d-c;
+       c=d+c;
+       document.getElementById("demo3").innerHTML=`The value of c is ${c} and the value of d is ${d}`;
 
        //Program to convert Celsius to fahrenheit
        let e=23;
@@ -116,23 +122,24 @@
     document.write("<br><br>The smallest number among 18 and 20 is ",small);
 
      //Program to check the given number is zero,positive and negative
-     let N=1;
-     m=N<0?"negative":"positive";
-     document.write("<br><br>The given number is ",m);
+     let N=-3;
+     
+     document.write("<br><br> The number is",N<0?"negative": N>0?"positive":"zero");
+
      
 
      //Program to find whether the person is eligible for voting using ternary operator
-     let age=19;
+     let age=20;
      el=age>18?"eligible":"not eligible";
-     document.getElementById(demo14).innerHTML=`The person is ${el} for voting`;
+     document.getElementById("demo14").innerHTML=`The person is ${el} for voting`
 
      //JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80 return 65 otherwise return 80 (using ternary operator).
 
      let x=30;
      let y=29;
      sum=x+y;
-     document.write("The sum of two numbers is",sum);
-     check=sum
+     document.write("<br>The sum of two numbers is",sum);
+     document.write("<br>The result is ",sum>=50&&sum<=80?65:80)
 
 
 
