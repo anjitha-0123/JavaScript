@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[1,2,3,4,5]
+        {
+            document.write("The element in position 2 is ",a[2])
+            a[2]=10;
+            document.write("<br>The element in position 2 changed to ",a[2],"<br>")
+        }
+
+        
+    document.write("<br>The values are:")
+      
+        for(i=0;i<5;i++)
+        {
+            document.write("<br>",a[i])
+        }
+
+        document.write("<br><br>When we add 2 with the numbers")
+        for(i=0;i<a.length;i++)
+        {
+            a[i]=a[i]+2;
+            document.write("<br>",a[i])
+        }
+
+
+        document.write("<br><br>When we initilize values in runtime in an array")
+
+        let b=[];
+        for(let i=0;i<10;i++)
+        {
+            document.write("<br>",b[i]=i+1)
+        }
+
+
+
+        document.write("<br><br>Array of Strings")
+
+        let c=["Nayana","maya","Karthika","Sandhra","venna"]
+        let count=0;//flag
+        for(let i=0;i<c.length;i++)
+            {
+                if(c[i]==="Sandhra")
+    
+                 {
+                document.write("<br><br>The name Sandhra is in the list")
+                count=1;//TO AVOID REPEATATION OF LOOPING
+                break;
+                 }
+              
+            }
+            if(count==0)
+            {
+                document.write("<br>The name Sandhra is NOT the list")
+            }
+        
+           
+        
+
+
+    </script>
+</body>
+</html>
