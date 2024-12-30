@@ -8,16 +8,136 @@
 <body>
     <script>
         //JS program to find the sum of the elements in array.
+        document.write("1. The sum of the elements in array a=[1,2,3,4,5].<br><br>")
         let a=[1,2,3,4,5];
         let s=0;
-        for(i=0;i<5;i++)
+        for(i=0;i<a.length;i++)
     {
          s=s+a[i];
          
     }
-    document.write(s)
+    document.write("sum of the elements in array is ",s)
 
     //JS program to store & print even numbers upto 20 in an array
+    document.write("<br><br><br>2. store & print even numbers upto 20 in an array<br>")
+
+   let b=[];
+   for(let j=2;j<=20;j=j+2)
+   {
+    b[j]=j;
+    document.write("<br>",b[j])
+   } 
+    
+   //JS program to check whether a number is in the array and if present print the location
+   document.write("<br><br><br>3. check whether a number is in the array and if present print the location.")
+   let c=[11,22,33,44,55]
+   let count=0;
+   for(let i=0;i<c.length;i++)
+            {
+                if(c[i]===44)
+    
+                 {
+                document.write("<br><br>The number is present in location ",i)
+                count=1;
+                break;
+                 }
+              
+            }
+
+            if(count==0)
+            {
+                document.write("<br>The number is not present ")
+            }
+    
+//JS program to remove an element pesent in a specific location
+ document.write("<br><br><br>4. remove an element pesent in a specific location.")
+ let d=[32,33,34,35,36]
+ for(i=0;i<d.length;i++)
+   {   
+    document.write("<br>",d[i])   
+   }
+let p=2;
+d.splice(p,1)
+document.write("<br>After removing the element at position 2 the array is:");
+for (let i = 0; i < d.length; i++) 
+  {
+    document.write("<br>", d[i]);
+
+  }  
+
+//JS program to copy an element in an aaray to another array
+document.write("<br><br><br>5. copy an element in an aaray to another array.<br>")
+   document.write("first array is:")
+   let e=[51,52,53,54];
+   for(i=0;i<e.length;i++)
+   {   
+    document.write("&nbsp;",e[i])   
+   }
+
+   document.write("<br>second array is:")
+   let f=[61,62,63,64];
+   for( let j=0;j<f.length;j++)
+   {
+    document.write("&nbsp;",f[j])
+   }
+
+    f[2]=e[3];
+    document.write("<br>The new array is :")
+    for( let j=0;j<f.length;j++)
+{
+    document.write("&nbsp;",f[j])
+}
+   
+ // Print the pattern
+/*
+1
+2 2
+3 3 3
+*/  
+document.write("<br><br>The pattern 1 is:<br>")
+for(i=1;i<=3;i++)
+{
+  document.write("<br>")
+  for(j=1;j<=i;j++)
+  document.write(i)
+ 
+}
+
+
+
+/*
+2 2 2
+2 2 2
+2 2 2
+*/  
+document.write("<br><br>The pattern 2 is:<br>")
+ for(i=0;i<3;i++)
+   {
+    for(j=0;j<3;j++)
+    {
+      document.write("2&nbsp;")
+    } document.write("<br>")
+   }
+
+/*
+1 1 1
+2 2
+3
+*/ 
+document.write("<br><br>The pattern 3 is:<br>")
+for(i=1;i<=3;i++)
+{
+  document.write("<br>")
+  for(j=3;j>=i;j--)
+  document.write(i)
+}    
+
+   
+
+
+
+
+   
     
     </script>
 </body>

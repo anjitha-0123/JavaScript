@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="demo1"> </p>
+    <ul id="demo2"> </ul>
+    <select id="demo3"></select>
+    
+
+    <script>
+       // Program to print a para about yourself using createElement() , textContent & append child.
+        
+        let element1=document.createElement("p");
+        element1.textContent="1. JavaScript is a popular programming language used to make websites interactive and dynamic.";
+        document.getElementById("demo1").appendChild(element1)
+
+
+        //Make an unordered list of cinemas on html page using javascript.
+        let ul=document.createElement("ul");
+
+        let li1 = document.createElement("li");
+        li1.textContent ="Golam";
+        document.getElementById("demo2").appendChild(li1);
+
+
+        let li2 = document.createElement("li");
+        li2.textContent ="Romancham";
+        document.getElementById("demo2").appendChild(li2);
+
+        let li3 = document.createElement("li");
+        li3.textContent ="Vettam";
+        document.getElementById("demo2").appendChild(li3);
+
+        let li4 = document.createElement("li");
+        li4.textContent ="Njan";
+        document.getElementById("demo2").appendChild(li4);
+
+        let li5 = document.createElement("li");
+        li5.textContent ="Niram";
+        document.getElementById("demo2").appendChild(li5);
+
+        //Create a dropdown for programming language classes offered on html page using javascript.
+       /* let select=document.createElement("select");
+
+        let option1 = document.creatElement("option");
+        option1.value="JavaScript";
+        option1.textContent="JavaScript";
+        select.appendChild(option1);
+
+        let option2 = document.creatElement("option");
+        option2.value="Java";
+        option2.textContent="Java";
+        document.getElementById("demo3").appendChild(option2);
+*/
+
+
+        /*On the KBA-courses site you created add a radio button showing your experience on KBA(like good, bad, average).
+        let element3=document.createElement("input");
+        element3.type="radio";
+        element3.name="experience";
+        element3.value="good";
+        document.getElementById("demo1").appendChild(element3);  */
+
+        //Create a dropdown for list of cakes and print the value of second option.
+
+
+        //Print your full name storing fname & lname. Print in Uppercase.
+
+        let fname="6. anjitha";
+        let lname="tv";
+        let fullname=(fname+" "+lname).toUpperCase();
+        document.write("<br><br>",fullname);
+
+
+        //“You can study anything if you have a will to do it”.Take the substrings “You can study”, “you”,”will”,”do it” and combine as a sentence.
+        let a="7. You can study";
+        let b="you";
+        let c="will";
+        let d="do it";
+        let str=a+" "+b+" "+" "+c+" "+d;
+        document.write("<br>",str)
+
+
+//“MongoDB is a decentralised distributed ledger . MongoDB can eliminate centralisation.” Replace MongoDB with Blockchain.
+
+
+//Print the string “MongoDB is a decentralised distributed ledger” using substring/substr.
+let z="9. MongoDB is a";
+let y="decentralised";
+let x="distributed ledger";
+let substr=z+" "+y+" "+x+" ";
+document.write("<br>",substr)
+
+//Compare “Hello World” & “hEllO World” and display the result & its type.
+document.write("<br><br>10.")
+const l="Hello World";
+const h="hEllo World";
+document.write(`<br>l=${l}`)
+document.write(`&nbsp;&nbsp; h=${h}`)
+
+if(l===h){
+    document.write("<br>These are same ")
+}
+else{
+    document.write("<br>These are different")
+}
+
+document.write("<br> l type is ",typeof(l),"<br> h type is ",typeof(h))  
+
+//Print this statement “ I am ___ yrs of old and my brother is 10 yrs older to me. He is now __ years old.”
+document.write("<br><br>11. Print this statement")
+z=23;
+document.write(`<br>I am ${z} yrs of old and my brother is 10 yrs older to me. He is now ${z+10} years old`);
+
+//Consider this statement “ My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase).
+document.write("<br>12. another statement")
+fname="anjitha";
+r=fname.toUpperCase;
+lname="tv";
+loca="Trivandrum";
+document.write(`My name is ${r}. I live in ${loca}`)
+
+
+
+
+    </script>
+</body>
+</html>
