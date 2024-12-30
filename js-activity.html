@@ -13,6 +13,7 @@
     
 
     <script>
+        //Activity Set 1
        // Program to print a para about yourself using createElement() , textContent & append child.
         
         let element1=document.createElement("p");
@@ -120,12 +121,167 @@ document.write(`<br>I am ${z} yrs of old and my brother is 10 yrs older to me. H
 //Consider this statement “ My name is ________.(declaring fname & lastname in uppercase). I live in ____(uppercase).
 document.write("<br>12. another statement")
 fname="anjitha";
-r=fname.toUpperCase;
+fn=fname.toUpperCase();
+
 lname="tv";
+ln=lname.toUpperCase();
+
+y=fn+" "+ln;
+
 loca="Trivandrum";
-document.write(`My name is ${r}. I live in ${loca}`)
+lo=loca.toUpperCase();
+
+document.write(`My name is ${y}. I live in ${lo}`)
+
+//Consider these two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't like'.
+
+//Write a JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80 return 65 otherwise return 80 (using ternary operator).
+
+//Program to find whether the person is eligible for voting using ternary operatorProgram to find whether the person is eligible for voting using ternary operator
 
 
+
+
+
+//Activity Set 2
+//Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.
+document.write("<br><br>Activity Set 2 <br>1.)")
+m=21;
+if(m%3==0 || m%7==0) 
+{
+ document.write(` ${m} is multiple of 3 or 7`)
+}
+else
+{
+  document.write(` ${m} is not multiple of 3 or 7`)
+}
+
+//Write a JavaScript conditional statement to find the sign of the product of three numbers. Display with the specified sign.
+document.write("<br>2.)<br>")
+let v=34;
+let t=-2;
+let p=10;
+k=v*t*p;
+document.write(k);
+if(k<0)
+{
+  document.write("<br>The sign of product is negative and denoted as -")
+}
+else
+{
+    document.write("<br>The sign of product is positive and denoted as +")
+
+}
+
+//Write a program using switch case to check the CGPA on given condition.
+
+/*If the CGPA is 8 then print You got 8 CGPA.
+If the CGPA is 10 then print You got 10 CGPA.
+If the CGPA is 7 then print You got 7 CGPA.*/
+document.write("<br>3.)<br>")
+let cgpa='10';
+switch(cgpa)
+{
+   case'8':
+   {
+    document.write("You got 8 CGPA")
+    break;
+   }
+   case'10':
+   {
+    document.write("You got 10 CGPA")
+    break;
+   }
+   case'7':
+   {
+    document.write("You got 7 CGPA")
+    break;
+   }
+   default:
+    {
+     document.write("Enter  valid mark")
+    }
+}
+
+//Write a program to print the month name by given number using switch
+document.write("<br>4.)<br>")
+
+m='6';
+switch(m)
+{
+    case'1':
+    {
+        document.write("January")
+        break;
+    }
+    case'2':
+    {
+        document.write("February")
+        break;
+    }
+    case'3':
+    {
+        document.write("March")
+        break;
+    }
+    case'4':
+    {
+        document.write("April")
+        break;
+    }
+    case'5':
+    {
+        document.write("May")
+        break;
+    }
+    case'6':
+    {
+        document.write("June")
+        break;
+    }
+    case'7':
+    {
+        document.write("July")
+        break;
+    }
+    case'8':
+    {
+        document.write("August")
+        break;
+    }
+    case'9':
+    {
+        document.write("September")
+        break;
+    }
+    case'10':
+    {
+        document.write("October")
+        break;
+    }
+    case'11':
+    {
+        document.write("November")
+        break;
+    }
+    case'12':
+    {
+        document.write("December")
+        break;
+    }
+}
+
+//Write a program to calculate the root of a quadratic equation.
+
+
+//Write a program to read temperature in centigrade and display a suitable message according to the temperature state below:
+
+/*Temp < 0 then Freezing weather
+Temp 0-10 then Very Cold weather
+Temp 10-20 then Cold weather
+Temp 20-30 then Normal in Temp
+Temp 30-40 then Its Hot
+Temp >=40 then Its Very Hot*/
 
 
     </script>
