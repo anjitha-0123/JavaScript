@@ -19,15 +19,37 @@
         average();//function calling -then only it will print
 
   // passing two values for function
-       function sum(a,b)
+       function add(a,b)
        {
         sum=a+b;
+        document.write("<br>The sum is ",sum);
        }
-       let x=6;y=8;
-       sum(x,y);
-       document.write("<br>",sum);
+       let x=6,y=8;
+       add(x,y);
 
-        
+       //to call calculations inside function seperately 
+       function Avg(a,b){
+        const sum=a+b;
+        const avg=sum/2;
+        return avg;
+       }
+      x=10,y=4;
+      avg=Avg(x,y);
+      document.write("<br>The avg is:",avg);
+      console.log(avg);
+
+       //Area of circle
+       function area(r)
+       {
+        pi=3.14;
+        A=pi*r*r;
+        return A;
+       }
+       let r1=2;
+       area=area(r1);
+      document.write("<br>Area of circle is:",A);
+
+
 
     </script>
 </body>
