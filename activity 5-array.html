@@ -46,8 +46,43 @@ a.push(b)
 document.write(a)
 
 //JS program to read an array and sort in ascending and descending order
-document.write("<br><br>3.<br>")
-//a=[1,5,7,8.4];
+document.write("<br><br>3 a.<br>")
+//ascending
+a=[1,5,7,8,4];
+for(i=0;i<a.length;i++)
+{
+  for(j=i+1;j<a.length;j++)
+  {
+    if(a[i]>a[j])
+    {
+      let temp=a[i];
+      a[i]=a[j];
+      a[j]=temp;
+
+    }
+  }
+}
+document.write("Ascending order array is ",a)
+
+document.write("<br><br>3 b.<br>")
+//descending S
+a=[1,5,7,8,4];
+for(i=0;i<a.length;i++)
+{
+  for(j=i+1;j<a.length;j++)
+  {
+    if(a[i]<a[j])
+    {
+      let temp=a[i];
+      a[i]=a[j];
+      a[j]=temp;
+
+    }
+  }
+}
+document.write("Decending order array is ",a)
+
+
 
 
 //Write a program to read the array [1,6,7,8,2,3,4,2,2].Find the occurance of 2 in this array.
