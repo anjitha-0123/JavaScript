@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    HTML page containing an input tab to enter temperature in celsius and on a button click, it should be converted to fahreinheit
+    <br>
+    <label>Enter Temperature</label>
+    <input type="text" onchange="handleChange(event)" id="demo1">
+    <button onclick="handleClick()">Convert</button>
+    <p type="text" id="demo2"></p>
+    <script>
+        function handleChange(event)
+        {
+            console.log(event.target.value);
+            temp=event.target.value;
+            
+        }
+        function handleClick()
+        {
+            fahreinheit=(temp*9/5)+32;
+            document.getElementById("demo2").innerHTML=fahreinheit;
+        }
+    </script>
+<br>
+//HTML page to read "name, date-of-birth" and display this in format of id card on clicking "generate ID" button.
+<br>
+<label>Enter Your Name : </label>
+<input type="text" id="demo3">
+<br>
+<label>Date of Birth : </label>
+<input type="date" id="demo4">
+<button onclick="generate()">Generate ID</button>
+<p id="demo5"></p>
+<script>
+    function generate()
+    {  
+        name=document.getElementById("demo3").value;
+        dob=document.getElementById("demo4").value;
+        document.getElementById("demo5").innerHTML=`Name : ${name}<br> DOB : ${dob}` 
+    }
+</script>
+//HTML to read a number and on clicking button find the square of the number.
+<label> Number</label>
+<input type="number" id="num">
+<button onclick="square()">Square</button>
+<p id="S1"></p>
+<script>
+    function square()
+    {
+      number=document.getElementById("num").value;
+      s=number*number;
+      document.getElementById("S1").innerHTML=s;
+    }
+</script>
+<br>
+//Html page to enter names of fruits and insert the entered name to array and there is a dropdown and on selecting the index from drop down, display the fruit on the index.
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="handleId(event)" id="sub">
+        <label> Name: </label>
+        <input type="text" id="na" >
+        <label>Class : </label>
+        <input type="text" id="cl">
+        <input type="submit">
+        <script>
+            function handleId(event)
+            {
+    
+                event.preventDefault();//prevent the default behavior of form ,to avoid refeshing while clicking submit
+                name=document.getElementById("na").value;
+                clas=document.getElementById("cl").value;
+                document.getElementById("sub").innerHTML=`St.Antony's HSS MALA <br> Name : ${name} <br> Class : ${clas}`
+               
+              
+            }
+        </script>
+    </form>
+    
+</body>
+</html>
