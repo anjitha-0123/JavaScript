@@ -18,9 +18,14 @@
         {
           name=document.getElementById("name").value;
           clas=document.getElementById("class").value;
-          document.getElementById("id").innerHTML=`St.Antony's HSS MALA <br> Name : ${name} <br> Class : ${clas}`
-
-          
+          //add object
+          const Student={
+            fname:name,
+            course:clas
+          }
+         // document.getElementById("id").innerHTML=`St.Antony's HSS MALA <br> Name : ${name} <br> Class : ${clas}` 
+            document.getElementById("id").innerHTML=`St.Antony's HSS MALA <br> Name : ${Student.fname} <br> Class : ${Student.course}`          
+         
         }
 
      </script>
