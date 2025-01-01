@@ -10,12 +10,33 @@
         //add 2 to the array and copy into new array and print it
         let a=[1,2,3,4,5];
         let b=[];
-        a.forEach(function(i)   
+        a.forEach(function(i)   //anonymous function
     {  
-        b=i+2;
-        document.write(`&nbsp;`,b);
-
+        i=i+2;
+        b.push(i);
+     
     })
+    document.write(b);
+
+
+    //anonymous function another method
+    let sum=function(x,y){
+        return x+y;
+    }
+    document.write("<br>The sum is ",sum(2,3));
+
+
+    //foreach using arrow function
+    a=[2,4,6];
+    z=[];
+    a.forEach((x)=>{
+        x=x+2;
+        z.push(x)
+    })
+    document.write("<br>",z)
+    
+
+
         
     </script>
     

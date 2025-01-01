@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Student1={
+            fname:"Anjitha",
+            lname:"tv",
+            phone:123456,
+            address:{
+                housename:"Thottekkattil",
+                houseno:105,
+                place:"Thrissur",
+                pin:680741
+            }
+        };
+        const Student2={
+            fname:"Avitha",
+            lname:"tv",
+            phone:336575
+        };
+        const Student3={
+            fname:"vigitha",
+            lname:"tv",
+            phone:9284688
+        };
+
+        document.write(Student1.fname ,"'s phone number is ",Student1.phone);
+        document.write("<br>",Student2.fname ,"'s phone number is ",Student2.phone);
+        document.write("<br>",Student3.fname ,"'s phone number is ",Student3.phone);
+
+        //if we want to additinally add to exsiting object like student2
+        Student1.class="BlockChain"
+        document.write("<br>",Student1.fname,"'s class is ",Student1.class)
+
+        //to access object inside an object
+        document.write("<br>",Student1.fname,"'s house name is ",Student1.address.housename)
+
+       
+    </script>
+</body>
+</html>
