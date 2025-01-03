@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Student={
+            fname:"Anjitha",
+            lname:"tv",
+            phone:123456,
+            address:{
+                housename:"Thottekkattil",
+                houseno:105,
+                place:"Thrissur",
+                pin:680741
+            }
+        }
+        document.write("Student Name is : ",Student.fname+Student.lname,"<br> Student phonenumber is :",Student.phone)
+        const myArray=Object.values(Student);//values of student object assigning into an array
+        console.log("Array is : ",myArray);
+        const str=JSON.stringify(Student);//stringifying the data for sending frontend to backend
+        console.log("JASON String",str);
+        const JasonF=JSON.parse(str); // again coverting the string into the object using parse
+        console.log("JASON format",JasonF);
+
+    </script>
+</body>
+</html>

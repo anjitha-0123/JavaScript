@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   // HTML page to collect details of a Person like firstName,lastName,date of birth,Address(another Object),
+    Phone number and read it on object variable and create an ID proof using this object.
+    <br><br>
+
+    <form onsubmit="handleID(event)" id="sub">
+        <label>First Name: </label>
+        <input type="text" id="fa" ></input>
+        <label>Last Name : </label>
+        <input type="text" id="la"></input>
+        <label>Date of Birth :</label>
+        <input type="date" id="dob"></input><br><br>
+        <label>Address</label>
+        <textarea rows="3" cols="18" id="ta"></textarea>
+        <label>Phone Number</label>
+        <input type="tel" id="nu"></input>
+        <input type="submit"></input>
+        </form>
+        
+        
+    <script>
+        function handleID(event){
+            event.preventDefault();
+            fname=document.getElementById("fa").value;
+            lname=document.getElementById("la").value;
+            dateb=document.getElementById("dob").value;
+            addr=document.getElementById("ta").value;
+            phon=document.getElementById("nu").value;
+            
+            const Student=
+            {   
+                firstName:fname,
+                lastName:lname,
+                dateofbirth:dateb,
+                adds:addr,
+                pho:phon
+            }
+            document.getElementById("sub").innerHTML=`ID PROOF <br> Name : ${Student.firstName+Student.lastName} <br> Date of Birth : ${Student.dateofbirth}<br> Address: ${Student.adds} <br> Phone :  ${Student.pho} `
+
+
+        }
+       
+
+
+    </script>
+</body>
+</html>
