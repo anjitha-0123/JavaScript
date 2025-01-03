@@ -6,8 +6,8 @@
     <title>Document</title>
     <script>
         
-        function handleCart(){
-            const num=document.getElementById("qty").value;
+        function handleCart(event){
+            let num=document.getElementById("qty").value;
            
 
            
@@ -24,10 +24,11 @@
                 Quantity:num1,
                 Total:total
             }
+        }
 
            item1=Object.values(Items)
            document.getElementById("demo1").innerHTML=`Total price is ${item1}`
-        }
+        
         
 
     </script>
@@ -37,7 +38,7 @@
     <label> Qty</label>
     <input type="number" id="qty">
     <label>Price : 500</label>
-    <button onclick="handleCart()" id="cart">Add to Cart</button>
+    <button onclick="handleCart(event)" id="cart">Add to Cart</button>
     <br><br>
     <label>Item 2</label>
     <label> Qty</label>
