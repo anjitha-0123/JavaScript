@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //a variable decleared and initilized then created a new map. map is a object
+        const mymap=new Map();    //to store datas into map use variablename.set [set]
+        mymap.set("name","Anu");
+        mymap.set("age",30);
+        mymap.set("Employee",true);
+        console.log(mymap.get('name')); //to retreve or access the data  use variablename.get.value [get]
+        document.write(mymap.get('name')); //to retreve or access the data  use variablename.get.value [get]
+
+        console.log(mymap);
+        
+        console.log(mymap.get("age"));
+        document.write("<br>",mymap.get("age"));
+
+        console.log(mymap.get("Employee"));
+        
+
+       // set and get are keyvalue pair
+
+       //has will check a particular entity is there or not- mymap.has("name")
+       //to delete use delete  - mymap.delete("name")
+       
+
+
+    
+
+   </script>
+    
+</body>
+</html>

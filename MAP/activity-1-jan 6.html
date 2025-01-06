@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function handleClick(){
+            const product=new Map([
+                ["Item","Apple"],
+                ["Qty",5],
+                ["Price",30],
+                ["item1","orange"],
+                ["Qty1",3],
+                ["Price1",40],
+                ["item2","mango"],
+                ["Qty2",3],
+                ["Price2",20]
+
+            ])
+
+            document.getElementById("item1").innerHTML="Item : "+product.get("item1");
+            document.getElementById("qty1").innerHTML="Qty : "+product.get("Qty1") ;
+            document.getElementById("price1").innerHTML="Price  : "+product.get("Price1")
+            document.getElementById("item").innerHTML="Item : "+product.get("Item");
+            document.getElementById("qty").innerHTML="Qty : "+product.get("Qty") ;
+            document.getElementById("price").innerHTML="Price  : "+product.get("Price")
+
+
+
+            
+
+            let Total=product.get("Qty1")*product.get("Price1")+product.get("Qty")*product.get("Price");
+            document.getElementById("total").innerHTML="Total : "+Total;
+        }
+    </script>
+</head>
+<body>
+    <h1>Shopping Mart</h1>
+    <h2>Purchase</h2>
+    <button onclick="handleClick()">Show Cart</button>
+    <p id="item"></p>
+    <p id="qty"></p>
+    <p id="price"></p>
+    
+    <p id="item1"></p>
+    <p id="qty1"></p>
+    <p id="price1"></p> 
+    
+    <p id="total"></p> 
+</body>
+</html>

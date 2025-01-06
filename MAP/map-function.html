@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function MapMethods(){
+
+
+           /* const mymap=new Map();
+            mymap.set("Name","Anu");
+            mymap.set("Age",24);
+            mymap.set("Place","TVM")
+            mymap.set("Employee",true);
+            mymap.set("Role",["Admin","User"])
+            */
+            //or 
+            const mymap= new Map([
+                ["Name","Anu"],
+                ["Age",30],
+                ["Employee",true],
+                ["Role",["Admin","User"]]
+                ])
+            
+
+            document.getElementById("get").innerHTML="Name : "+mymap.get("Name");
+            document.getElementById("has").innerHTML="Age : "+mymap.has("Age");
+            document.getElementById("delete").innerHTML="After deleting the name "+mymap.delete("Employee");
+            
+           
+           //add new entity as roles
+            let roles=mymap.get("Role")
+            document.getElementById("role").innerHTML="After removing mymap :"+roles.join("&"); // name.join 
+            console.log(mymap);
+
+            //mymap.clear();//to clear the object
+            document.getElementById("size").innerHTML="Size is :"+mymap.size; //to check the size of object - variablename.size
+           //MAP Iteration
+            let output=" ";
+            mymap.forEach((value,key)=>{
+
+                if(Array.isArray(value))   //used to check the value is array or not
+                {
+                   output += key + '=' + value.join("&")+ '<br>'
+                }
+                 else
+                output += key + '=' + value + '<br>'  //output +=: This means "append to the existing value of output".  here + is doing string concatination
+               
+               
+            });
+
+            document.getElementById("Iteration").innerHTML=output;
+            
+            
+
+
+        }
+    </script>
+</head>
+<body>
+    <h1>Map Mathods</h1>
+    <h2>Map Operations</h2>
+    <button onclick="MapMethods()" >Map</button>
+    <p id="get"></p>
+    <p id="has"></p>
+    <p id="delete"></p>
+    <p id="clear"></p>
+    <p id="role"></p>
+    <p id="size"></p>
+    <p id="Iteration"></p>
+
+    
+</body>
+</html>

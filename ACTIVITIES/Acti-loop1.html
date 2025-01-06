@@ -26,7 +26,8 @@
 //JS program to print reverse of a number
 
 document.write("<br><br>reverse of a number")    
-let q=543;
+let q=222;
+q1=q;
 let r=0;
 while(q>0)
 {
@@ -35,6 +36,13 @@ while(q>0)
     q=Math.floor(q/10);
 }
 document.write("<br>",r)
+document.write("<br>",q)
+if(q1===r){
+    document.write("The number is palindrome ")
+} else{
+    document.write("The number is not palindrome ")
+
+}
 
 
 //JS program to print the patterns 25,30,35,40,45,50
