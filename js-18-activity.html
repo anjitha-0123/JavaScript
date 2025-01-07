@@ -9,7 +9,14 @@
     
     <p id="demo1"> </p>
     <ul id="demo2"> </ul>
-    <select id="demo3"></select>
+
+    <div id="kba"></div><br>
+
+    <select id="cake"></select>
+    
+    <select id="demo"></select>
+   
+
     
 
     <script>
@@ -46,29 +53,92 @@
         document.getElementById("demo2").appendChild(li5);
 
         //Create a dropdown for programming language classes offered on html page using javascript.
-       /* let select=document.createElement("select");
+       
+   document.write("Select a Programming Language")
 
-        let option1 = document.creatElement("option");
-        option1.value="JavaScript";
-        option1.textContent="JavaScript";
-        select.appendChild(option1);
+   let dropdown=document.createElement("select")
+   dropdown=document.getElementById("demo")
+   
 
-        let option2 = document.creatElement("option");
-        option2.value="Java";
-        option2.textContent="Java";
-        document.getElementById("demo3").appendChild(option2);
-*/
+   let option1=document.createElement("option")
+   option1.innerHTML="Java";
+   dropdown.appendChild(option1)
+
+   let option2=document.createElement("option")
+   option2.innerHTML="JavaScript";
+   dropdown.appendChild(option2)
+
+   let option3=document.createElement("option")
+   option3.innerHTML="Python";
+   dropdown.appendChild(option3)
 
 
-        /*On the KBA-courses site you created add a radio button showing your experience on KBA(like good, bad, average).
-        let element3=document.createElement("input");
-        element3.type="radio";
-        element3.name="experience";
-        element3.value="good";
-        document.getElementById("demo1").appendChild(element3);  */
+        //On the KBA-courses site you created add a radio button showing your experience on KBA(like good, bad, average).
+let section=document.getElementById("kba");
+
+let label=document.createElement("label");
+label.innerHTML="Experience on KBA";
+section.appendChild(label);
+//first radio button
+let goodradio=document.createElement("input")
+goodradio.name="choice"
+goodradio.type="radio"
+goodradio.id="button"
+goodradio.value="button"
+section.appendChild(goodradio)
+
+let label1=document.createElement("label")
+label1.innerHTML="Good";
+section.appendChild(label1)
+//second radio button
+let goodradio1=document.createElement("input")
+goodradio1.name="choice"
+goodradio1.type="radio"
+goodradio1.id="button1"
+goodradio1.value="button1"
+section.appendChild(goodradio1)
+
+let label2=document.createElement("label")
+label2.innerHTML="Bad";
+section.appendChild(label2)
+//third radio button
+let goodradio2=document.createElement("input")
+goodradio2.name="choice"
+goodradio2.type="radio"
+goodradio2.id="button2"
+goodradio2.value="button2"
+section.appendChild(goodradio2)
+
+let label3=document.createElement("label")
+label3.innerHTML="Average"
+section.appendChild(label3)
+
+
+
+
+
+
+       
 
         //Create a dropdown for list of cakes and print the value of second option.
+document.write("<br><br>Select a Cake")
 
+let dropdown1=document.createElement("select");
+dropdown1=document.getElementById("cake");
+
+ let opt1=document.createElement("option")
+ opt1.innerHTML="Chocolate";
+ dropdown1.appendChild(opt1);
+
+ let opt2=document.createElement("option")
+ opt2.innerHTML="Vanila";
+ dropdown1.appendChild(opt2);
+
+ let opt3=document.createElement("option")
+ opt3.innerHTML="Pista";
+ dropdown1.appendChild(opt3);
+
+  
 
         //Print your full name storing fname & lname. Print in Uppercase.
 
@@ -141,15 +211,30 @@ document.write(`My name is ${y}. I live in ${lo}`)
 //Consider these two statements “I like to play video games.” “I don’t like Hide & seek”. Change 'like' to 'don't like'.
 a="I like to play video games";
 b="I don't like Hide & seek";
+document.write("<br><br>13. ",a);
+document.write("<br>  ",b);
+let change=a.replace("like","don't like")
+document.write("<br>Changed sentence is ",change)
+
 
 
 
 
 
 //Write a JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80 return 65 otherwise return 80 (using ternary operator).
+document.write("<br><br>14.")
+
+      x=32;
+      y=20;
+     sum=x+y;
+     document.write("<br>The sum of two numbers is ",sum);
+     document.write("<br>The result is ",sum>=50&&sum<=80?65:80)
 
 //Program to find whether the person is eligible for voting using ternary operatorProgram to find whether the person is eligible for voting using ternary operator
 
+ let age=20;
+     el=age>18?"eligible":"not eligible";
+     document.write("<br><br>15.The person is "+el+" for voting")
 
 
 
@@ -283,7 +368,26 @@ switch(m)
 }
 
 //Write a program to calculate the root of a quadratic equation.
+document.write("<br><br> 5.")
 
+a=1;
+b=3;
+c=2 ;
+d=b*b - 4*a*c ;
+
+if(d>0){
+    let root1= (-b + Math.sqrt(d))/2*a;
+    let root2= (-b - Math.sqrt(d))/2*a;
+    document.write("The roots are "+root1 +",",+root2) 
+}
+else if(d==0){
+    let root=(-b)/2*a;
+    document.write("The roots are "+root) 
+}
+else{
+    document.write("The roots are complex") 
+   
+}
 
 //Write a program to read temperature in centigrade and display a suitable message according to the temperature state below:
 
@@ -293,7 +397,7 @@ Temp 10-20 then Cold weather
 Temp 20-30 then Normal in Temp
 Temp 30-40 then Its Hot
 Temp >=40 then Its Very Hot*/
-document.write("<br>4.)<br>")
+document.write("<br><br>6.)<br>")
 
 temp=32;
 if(temp<0)
@@ -320,12 +424,6 @@ else if(temp>=30&&temp<=40){
     
 else if(temp>=40){
     document.write("Its Very Hot");}
-
-
-
-
-
-
 
     </script>
 </body>
