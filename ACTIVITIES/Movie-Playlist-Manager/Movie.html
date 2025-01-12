@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .strike{
+        text-decoration: line-through;
+        color: grey;}
+    </style>
+    
+    <script>
+        
+        let movie=[]; //Array to store movies 
+        let priority=[]; //Array to store priority
+
+        //function to perform when it click the add movie button
+        function getmovieInput(){
+            const Moviename=document.getElementById("mymovie").value.trim(); //storing the input value of movie into Moviename variable
+            const Moviepriority=parseInt(document.getElementById("Mpriority").value); //storing the input value of prority into Moviepriority variable
+            const movieList=document.getElementById("show1")    //calling the id of button to list movies
+
+
+            if(Moviename.trim()===" " || (Moviepriority!==1 && Moviepriority !==2 && Moviepriority !== 3))
+            {
+                alert("Enter a valid movie name and priority (1,2 or 3)!");
+                return;
+            }
+            movie.push(Moviename);
+            priority.push(Moviepriority);
+
+            const list=document.createElement("li");
+            list.innerHTML=Moviename;
+            
+
+            if(Moviepriority==1){
+                list.classList.add("text-green-600") //(classList is a js property)add one (or more) CSS classes(text-green-600) to the list element.
+            }
+            else if(Moviepriority==2){
+                list.classList.add("text-yellow-600")
+            }
+            else {
+                list.classList.add("text-red-600")
+            }
+        movieList.appendChild(list);
+        document.getElementById("mymovie").value=" ";
+        document.getElementById("Mpriority").value=" ";
+        
+        let btn1=document.createElement("button");
+        btn1.textContent="Watched";
+          //btn1.className="clbtn1"
+          list.appendChild(btn1);
+          btn1.onclick=function(){
+        list.className="strike"
+
+          }   
+    }
+    </script>
+</head>
+<body>
+    <nav class="border-4 border-black grid">
+
+        <div class="flex justify-between mt-4">
+           <div class="text-3xl font-semibold font-mono ml-6 text-emerald-800"><p>MOVIES.COM</p></div>
+           <div class="font-semibold text-blue-900 mt-4">
+            <a href="Home" class="ml-2">Home</a>
+            <a href="Movies" class="ml-10">Movies</a>
+            <a href="Language"class="ml-10">Language</a>
+            <a href="Genre"class="ml-10">Genre</a>
+            <a href="About"class="ml-10">About</a>
+           </div>
+           <div><img src="Assets/profile.jpeg" class="w-[90px] h-[90px] mr-6 rounded-full"></div>
+        </div>
+
+        <div class="flex ml-[630px] mb-2">
+            <div class="flex ml-24"><input type="search" class="w-[500px] h-12 bg-gray-300 rounded-lg" placeholder="search">
+               <a><img src="Assets/search.png" class="w-[50px] h-[50px]" ></a>
+            </div>
+            <a href="Logout" class="ml-[347px] mt-2"><button class="w-24 h-8 bg-green-800 text-white rounded-lg ml-24">Logout</button></a>
+         </div>
+    </nav>
+         <div class="w-full border-2  border-black h-[450px]">
+         <ul class=" flex justify-between mt-24">
+
+            <li><div><iframe class="w-96 h-60 ml-2" src="https://www.youtube.com/embed/CopUV9QH1pQ"></iframe>
+                <label class="ml-6">Movie : shutter-Island(2015)</label>
+                <div class="flex ml-6"><label>Genre 1: Thriller</label><div class="w-4 h-4 rounded-full bg-green-900 ml-2 mt-1"></div>
+                </div>
+            </div></li>
+            
+            <li><div><iframe class="w-96 h-60 ml-2 mr-4" src="https://www.youtube.com/embed/y1yvUokwfrQ"></iframe>
+                <label class="ml-6">Movie : The Grinch</label>
+                <div class="flex ml-6"><label>Genre 2: Comedy </label><div class="w-4 h-4 rounded-full bg-yellow-500 ml-2 mt-1"></div>
+                </div>
+            </div></li>
+
+            <li><div><iframe class="w-96 h-60 ml-4" src="https://www.youtube.com/embed/w556zi-vP48"></iframe> 
+                <label class="ml-6">Movie : Five Feet Apart </label>
+                <div class="flex ml-6"><label>Genre 3: Romance </label><div class="w-4 h-4 rounded-full bg-red-900 ml-2 mt-1 "></div>
+                </div>
+                </div></li>
+                
+        </ul>
+        </div>
+
+        <div class="grid border-2 border-black w-[270px] h-[130px] mt-4 mx-auto">
+            <input type="text" class="border-2 border-black w-64 h-12 ml-1 mt-2" placeholder="Movie Name" id="mymovie">
+           <input type="number" id="Mpriority" placeholder="Priority(1-3)" min="1" max="3" class="border-2 border-black w-64 h-12 ml-1 mt-2">
+            <button class="mt-4 w-64 h-12 ml-1 mt-8 bg-green-900 text-white " onclick="getmovieInput()">Add Movie</button>
+            <ul id="show1"></ul>
+            
+            </div>
+</body>
+</html>
