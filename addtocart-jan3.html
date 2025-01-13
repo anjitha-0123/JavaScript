@@ -10,13 +10,23 @@ let array=[]; //TO store the values into an arry
      function handleCart()
      {
        
-
+        array.push(document.getElementById("qty").value);
+        array.push(document.getElementById("price").value);
+        array.push(document.getElementById("qty1").value);
+        array.push(document.getElementById("price1").value);
+        array.push(document.getElementById("qty2").value);
+        array.push(document.getElementById("price2").value);
+        
        
      }
      function handleClick(){
         let num=document.getElementById("qty").value;
         let p=document.getElementById("price").value;
-        let total=num*p;
+        let num1=document.getElementById("qty1").value;
+        let p1=document.getElementById("price1").value;
+        let num2=document.getElementById("qty2").value;
+        let p2=document.getElementById("price2").value;
+        let total=num*p+num1*p1+num2*p2;
         document.getElementById("check").innerHTML="Total is "+total;
      }
 </script>
@@ -27,21 +37,21 @@ let array=[]; //TO store the values into an arry
     <input type="number" id="qty">
     <label for="price">Price</label>
     <input type="number" id="price">
-    <button onclick="handleCart(Item1)" id="cart">Add to cart</button>
+    <button onclick="handleCart()">Add to cart</button>
     <br><br>
     <label for="Item2">Item2</label>   
     <label for="Quantity">Quantity</label>
-    <input type="number" id="qty">
+    <input type="number" id="qty1">
     <label for="price">Price</label>
-    <input type="number" id="price">
-    <button onclick="handleCart()" id="cart1">Add to cart</button>
+    <input type="number" id="price1">
+    <button onclick="handleCart()">Add to cart</button>
     <br><br>
     <label for="Item3">Item3</label>
     <label for="Quantity">Quantity</label>
-    <input type="number" id="qty">
+    <input type="number" id="qty2">
     <label for="price">Price</label>
-    <input type="number" id="price">
-    <button onclick="handleCart()" id="cart2">Add to cart</button>
+    <input type="number" id="price2">
+    <button onclick="handleCart()">Add to cart</button>
     
 
     <button onclick="handleClick()">Check Out</button>

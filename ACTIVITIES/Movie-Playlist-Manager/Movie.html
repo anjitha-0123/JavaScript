@@ -6,6 +6,15 @@
     <title>Movie</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        .priority-low{
+            color: green;
+        }
+        .priority-medium{
+            color: yellow;
+        }
+        .priority-high{
+            color: red;
+        }
         .strike{
         text-decoration: line-through;
         color: grey;}
@@ -46,13 +55,13 @@
             
 
             if(Moviepriority==1){
-                list.classList.add("text-green-600") //(classList is a js property)add one (or more) CSS classes(text-green-600) to the list element.
+                list.classList.add("priority-low") //(classList is a js property)add one (or more) CSS classes(priority-low) to the list element.
             }
             else if(Moviepriority==2){
-                list.classList.add("text-yellow-600")
+                list.classList.add("priority-medium")
             }
             else {
-                list.classList.add("text-red-600")
+                list.classList.add("priority-high")
             }
         movieList.appendChild(list);
         document.getElementById("mymovie").value=" ";
