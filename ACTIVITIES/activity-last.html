@@ -46,9 +46,37 @@
 
 
         }
-       
-
-
     </script>
+<br><br>
+
+/*Html page to enter names of fruits and insert the entered name to array and there is a dropdown and on selecting
+the index from drop down, display the fruit on the index.*/
+<br>
+<label>Enter the names of Fruit</label>
+<input type="text" id="name">
+<button onclick="enterfruit()">Enter</button>
+<select id="index">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+</select>
+<button onclick="showfruit()">Fruit</button>
+<p id="show"></p>
+
+<script>
+
+      let fruit_array=[];
+    function enterfruit(){
+        fruit_array.push(document.getElementById("name").value);
+        console.log(fruit_array);
+    }
+    function showfruit(){
+        let index=(document.getElementById("index").value);
+        document.getElementById("show").innerHTML="The fruit is : "+fruit_array[index];
+        
+    }
+</script>
+
+
 </body>
 </html>
