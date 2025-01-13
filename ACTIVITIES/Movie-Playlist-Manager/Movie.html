@@ -9,6 +9,16 @@
         .strike{
         text-decoration: line-through;
         color: grey;}
+        .button1{
+            width: 80px;
+            height: 50px;
+            background-color: black;
+            color: bisque;
+            border-radius: 5px;
+            margin-left: 10px;
+            margin-top: 2px;
+        }
+
     </style>
     
     <script>
@@ -50,36 +60,19 @@
         
         let btn1=document.createElement("button");
         btn1.textContent="Watched";
-          //btn1.className="clbtn1"
+          btn1.className="button1" //to style the button give the classname
           list.appendChild(btn1);
           btn1.onclick=function(){
-        list.className="strike"
+          list.className="strike"
 
           }   
     }
     </script>
 </head>
 <body>
-    <nav class="border-4 border-black grid">
-
-        <div class="flex justify-between mt-4">
-           <div class="text-3xl font-semibold font-mono ml-6 text-emerald-800"><p>MOVIES.COM</p></div>
-           <div class="font-semibold text-blue-900 mt-4">
-            <a href="Home" class="ml-2">Home</a>
-            <a href="Movies" class="ml-10">Movies</a>
-            <a href="Language"class="ml-10">Language</a>
-            <a href="Genre"class="ml-10">Genre</a>
-            <a href="About"class="ml-10">About</a>
-           </div>
-           <div><img src="Assets/profile.jpeg" class="w-[90px] h-[90px] mr-6 rounded-full"></div>
-        </div>
-
-        <div class="flex ml-[630px] mb-2">
-            <div class="flex ml-24"><input type="search" class="w-[500px] h-12 bg-gray-300 rounded-lg" placeholder="search">
-               <a><img src="Assets/search.png" class="w-[50px] h-[50px]" ></a>
-            </div>
-            <a href="Logout" class="ml-[347px] mt-2"><button class="w-24 h-8 bg-green-800 text-white rounded-lg ml-24">Logout</button></a>
-         </div>
+    <nav class="border-4 border-black w-full h-24 bg-green-900">
+<h class="text-4xl flex justify-center text-white font-bold font-sans mt-4">MOVIE PLAYLIST MANAGER</h>
+       
     </nav>
          <div class="w-full border-2  border-black h-[450px]">
          <ul class=" flex justify-between mt-24">
