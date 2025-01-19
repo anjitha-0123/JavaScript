@@ -30,6 +30,7 @@
    <p id="price-lux" >250</p>
    <button  onclick="handleCart('qty-lux','price-lux')">Add to Cart</button>
    <button onclick="handleOut()">Checkout</button>
+   <p id="ans"></p>
    <script>
     const cart=[];
     let item;
@@ -56,6 +57,7 @@
            
         })
         console.log(totalPrice);
+        document.getElementById("ans").innerHTML=totalPrice;
     }
    </script>
 </body>

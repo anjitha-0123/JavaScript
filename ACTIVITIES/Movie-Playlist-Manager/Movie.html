@@ -27,6 +27,27 @@
             margin-left: 10px;
             margin-top: 2px;
         }
+        .button2{
+            width: 80px;
+            height: 50px;
+            background-color: black;
+            color: bisque;
+            border-radius: 5px;
+            margin-left: 10px;
+            margin-top: 2px;
+        }
+        .button3{
+            width: 80px;
+            height: 50px;
+            background-color: black;
+            color: bisque;
+            border-radius: 5px;
+            margin-left: 10px;
+            margin-top: 2px;
+        }
+
+
+
 
     </style>
     
@@ -37,9 +58,9 @@
 
         //function to perform when it click the add movie button
         function getmovieInput(){
-            const Moviename=document.getElementById("mymovie").value.trim(); //storing the input value of movie into Moviename variable
-            const Moviepriority=parseInt(document.getElementById("Mpriority").value); //storing the input value of prority into Moviepriority variable
-            const movieList=document.getElementById("show1")    //calling the id of button to list movies
+            let Moviename=document.getElementById("mymovie").value.trim(); //storing the input value of movie into Moviename variable
+            let Moviepriority=parseInt(document.getElementById("Mpriority").value); //storing the input value of prority into Moviepriority variable
+           let movieList=document.getElementById("show1")    //calling the id of button to list movies
 
 
             if(Moviename.trim()===" " || (Moviepriority!==1 && Moviepriority !==2 && Moviepriority !== 3))
@@ -74,7 +95,60 @@
           btn1.onclick=function(){
           list.className="strike"
 
-          }   
+          }  
+          
+          
+          let btn2=document.createElement("button");
+          btn2.textContent="edit";
+          btn2.className="button2";
+          list.appendChild(btn2);
+
+          btn2.onclick = function () {
+               let newMovie = prompt('Edit Movie Name:', Moviename);
+               let newPriority = parseInt(prompt('Edit Priority (1, 2, 3):', Moviepriority));
+
+          if (newMovie !== Moviename)
+           {
+        // Update the movie name
+             Moviename = newMovie.trim();
+             Moviepriority = newPriority;
+
+        // Update the list item text
+             list.innerHTML = Moviename;
+
+        // Remove all priority-related classes
+           list.classList.remove("priority-low", "priority-medium", "priority-high");
+
+        // Apply the new priority class
+            if (newPriority == 1) {
+               list.classList.add("priority-low");
+           } else if (newPriority == 2) {
+               list.classList.add("priority-medium");
+           } else {
+               list.classList.add("priority-high");
+           }
+
+        // Re-add the buttons
+        list.appendChild(btn1);
+        list.appendChild(btn2);
+        list.appendChild(btn3);
+        } 
+    else
+     {
+        alert("Invalid input. Please provide a valid name and priority (1, 2, or 3).");
+     }
+  };
+
+  let btn3=document.createElement("button");
+          btn3.textContent="Remove";
+          btn3.className="button3";
+          list.appendChild(btn3);
+
+  btn3.onclick=function(){
+        movieList.removeChild(list)
+    }
+
+          
     }
     </script>
 </head>
@@ -83,7 +157,7 @@
 <h class="text-4xl flex justify-center text-white font-bold font-sans mt-4">MOVIE PLAYLIST MANAGER</h>
        
     </nav>
-         <div class="w-full border-2  border-black h-[450px]">
+        <!---- <div class="w-full border-2  border-black h-[450px]">
          <ul class=" flex justify-between mt-24">
 
             <li><div><iframe class="w-96 h-60 ml-2" src="https://www.youtube.com/embed/CopUV9QH1pQ"></iframe>
@@ -105,7 +179,7 @@
                 </div></li>
                 
         </ul>
-        </div>
+        </div>--->
 
         <div class="grid border-2 border-black w-[270px] h-[130px] mt-4 mx-auto">
             <input type="text" class="border-2 border-black w-64 h-12 ml-1 mt-2" placeholder="Movie Name" id="mymovie">
