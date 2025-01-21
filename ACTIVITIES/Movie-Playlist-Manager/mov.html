@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie</title>
+    <style>
+        .priority-low
+        {
+            color: green;
+        }
+        .priority-medium
+        {
+            color: yellow;
+        }
+        .priority-high
+        {
+            color: red;
+        }
+        .strike
+        {
+            text-decoration: line-through;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1> Movie Playlist Manager</h1>
+    <input type="text" placeholder="Movie Name" id="mymovie">
+    <input type="number" placeholder="Priority(1-3)" min="1" max="3" id="mypriority">
+    <button onclick="getInputmovie()">Add Movie</button>
+    <ul id="show"></ul>
+</body>
+<script>
+    let movies=[];
+    let priority=[];
+    
+    function getInputmovie()
+    {
+        let Moviename=document.getElementById("mymovie").value;
+        let Moviepriority=document.getElementById("mypriority").value;
+        let Movielist=document.getElementById("show");
+
+        movies.push(Moviename);
+        priority.push(Moviepriority);
+
+        if(Moviename.trim()==="" || (Moviepriority!=1 && Moviepriority!=2 && Moviepriority!=3))
+    {
+        alert(`Enter a valid input`);
+        return;
+    }
+
+    let list=document.createElement("li");
+    list.innerHTML=Moviename;
+
+    if(Moviepriority==1)
+    {
+        list.classList.add("priority-low")
+    }
+    else if(Moviepriority==2)
+    {
+        list.classList.add("priority-medium")
+    }
+    else
+    {
+        list.classList.add("priority-high")
+    }
+
+    Movielist.appendChild(list);
+    document.getElementById("mymovie").value="";
+    document.getElementById("mypriority").value="";
+
+    let btn1=document.createElement("button");
+    btn1.textContent="watched";
+    list.appendChild(btn1);
+    btn1.onclick=function()
+    {
+        list.classList.add("strike")
+    }
+    
+    let btn2=document.createElement("button");
+    btn2.textContent="Edit";
+    list.appendChild(btn2);
+    btn2.onclick=function()
+    {
+        let newmovie=prompt(`Edit movie`,Moviename);
+        let newpriority=parseInt(prompt(`Choose priority(1-3)`,Moviepriority));
+
+        if(newmovie!==Moviename)
+    {
+        Moviename=newmovie.trim();
+        Moviepriority=newpriority;
+    }
+
+    list.innerHTML=Moviename;
+    list.classList.remove("priority-low","priority-medium","priority-high")
+
+    if(newpriority==1)
+    {
+        list.classList.add("priority-low")
+    }
+   else if(newpriority==2)
+    {
+        list.classList.add("priority-medium")
+    }
+    else
+    {
+        list.classList.add("priority-high")
+    }
+    Movielist.appendChild(list)
+
+    list.appendChild(btn1);
+    list.appendChild(btn2);
+    list.appendChild(btn3);
+
+    }
+
+    let btn3=document.createElement("button");
+    btn3.textContent="Remove";
+    list.appendChild(btn3);
+    btn3.onclick=function()
+    {
+        Movielist.removeChild(list)
+    }
+
+    }
+</script>
+</html>
