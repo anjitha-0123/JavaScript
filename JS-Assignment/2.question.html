@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .display
+        {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+    <form class="border-2 border-black w-[500px] h-[400px] mx-auto mt-24 ">
+    <div class="mt-12 ml-10">
+    <label>Name : </label>
+    <input type="text" class="border-2 border-black h-[35px] w-[250px]"><br>
+    </div>
+    <div class="mt-4 ml-6">
+    <label>Address : </label>
+    <textarea rows="5" cols="18" class="border-2 border-black h-[100px] w-[250px]"></textarea><br>
+    </div>
+    <div class="mt-4 ml-6">
+    <label>Degree : </label>
+    <input type="radio" name="degree" value="B.Tech">
+    <label>B.Tech</label>
+    <input type="radio" name="degree" value="M.Tech">
+    <label>M.Tech</label>
+    <input type="radio" name="degree" value="MCA">
+    <label>MCA</label>
+    <input type="radio" name="degree" value="Others" onclick="displaydropdown()">
+    <label>Others</label> 
+    <select class="display ml-2 w-24" id="other">
+        <option>BCA</option>
+        <option>PGDCA</option>
+        <option>B.Com</option>
+        <option>MPhil</option>
+    </select>
+    
+</form>
+</body>
+<script>
+    function displaydropdown()
+    {
+        document.getElementById("other").classList.remove("display");
+    }
+</script>
+</html>

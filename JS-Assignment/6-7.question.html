@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter Element </label>
+    <input type="text" id="one">
+    <button onclick="print()">Print</button>
+    <ul id="aone"></ul>
+
+    <label>Index</label>
+    <select id="atwo" onclick="Element1()">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+    </select>
+    <p id="two"></p>
+
+    <button onclick="sorting()" > Array in Sorted array </button>
+    <p id="athree"></p>
+
+    <label>Search: </label>
+    <input type="search" id="three">
+    <button onclick="reverse()">Reverse</button>
+    <p id="afour"></p>
+
+
+</body>
+<script>
+
+    element_array=[];
+    function print()
+    {   
+        let element1=document.getElementById("one").value;
+
+        let list=document.createElement("li");
+        list.innerHTML=element1;
+        aone.appendChild(list);
+
+        element_array.push(element1);
+        console.log(element1)
+        document.getElementById("one").value="";
+    }
+
+    function Element1()
+    {
+      let element1=document.getElementById("one").value;
+      element_array.push(element1);
+      let index=document.getElementById("atwo").value;
+      
+      for(i=0;i<element_array.length;i++)
+      {
+        if(index==i)
+      {
+        document.getElementById("two").innerHTML=element_array[i];
+      }
+      }
+     
+    }
+
+    function sorting()
+    {
+        let element1=document.getElementById("one").value;
+        element_array.push(element1);
+        element_array.sort();
+        let array=document.getElementById("athree").innerHTML=element_array
+    }
+
+    function reverse()
+    {  
+        let r="";
+        let str=document.getElementById("three").value;
+        for(i=str.length-1;i>=0;i--)
+        {                             //i = str.length – 1: Initializes i to the index of the last character in the string.
+            r=r+str[i];              //i >= 0: Continues the loop as long as i is greater than or equal to 0.
+        } 
+        document.getElementById("afour").innerHTML=r;
+    }                    
+
+
+</script>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Enter Name : </label>
+    <input type="text" id="name">
+    <label>Enter Mark :</label>
+    <input type="number" min="1" max="100" id="mark">
+    <button onclick="submission()">Submit</button>
+    <ul id="list"></ul>
+    <button> Average</button>
+</body>
+<script>
+    name=[];
+    mark=[];
+    function submission()
+    {
+        let Fname=document.getElementById("name").value;
+        let mark1=parseInt(document.getElementById("mark").value);
+        name.push(subject1);
+        mark.push(mark1);
+        
+       
+       document.getElementById("mark").value="";
+    }
+
+</script>
+</html>

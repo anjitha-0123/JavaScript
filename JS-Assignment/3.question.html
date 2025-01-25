@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="border-2 border-black w-[500px] h-[200px] mx-auto mt-24 ">
+   <div class="mt-2 ml-10"><label>First Number : </label>
+    <input type="number" class="border-2 border-black h-[35px] w-[250px] " id="fnum"><br></div> 
+    <div class="mt-2 ml-6"><label>Second Number : </label>
+    <input type="number" class="border-2 border-black h-[35px] w-[250px]" id="snum"><br></div>
+    <button onclick="compareInput()" class="bg-gray-800 text-white w-20 h-8 rounded-md ml-12 mt-6">Compare</button>
+    <p id="show" class="ml-40 text-xl"></p>
+    </div>
+</body>
+<script>
+    function compareInput()
+    
+    {
+      let fnum=parseInt(document.getElementById("fnum").value);
+      let snum=parseInt(document.getElementById("snum").value);
+     
+    if(fnum=="" || snum ==""){
+            alert("Enter Invalid Number")
+        }
+    else if (fnum==snum)
+    {
+        document.getElementById("show").innerHTML=`${fnum} = ${snum}`;
+     
+    } 
+    else if(fnum < snum)
+    {
+        document.getElementById("show").innerHTML=`${fnum} < ${snum}`;
+    } 
+    else 
+    {
+        document.getElementById("show").innerHTML=`${fnum} > ${snum}`;
+    } 
+
+    }
+      
+   
+</script>
+</html>

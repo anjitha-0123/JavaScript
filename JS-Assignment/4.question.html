@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="border-2 border-black w-[500px] h-[200px] mx-auto mt-24 ">
+    <label class="ml-4">Name : </label>
+    <input type="text" id="name"class="border-2 border-black h-[35px] w-[250px] mt-4">
+    <button onclick="RollName()" class="bg-gray-800 text-white w-24 h-8 rounded-md ml-2">Submit</button><br>
+    <label class="ml-2">Enter Roll Number : </label>
+    <input type="number" id="rnum"class="border-2 border-black h-[35px] w-[250px] mt-4">
+    <button onclick="GetInput()" class="bg-gray-800 text-white w-20 h-8 rounded-md ">Search</button>
+    <p id="show" class="text-xl ml-40 mt-4"></p>
+    </div>
+</body>
+<script>
+    let Name_array=[];
+    
+    function RollName()
+    {
+        let NameS=document.getElementById("name").value;
+        Name_array.push(NameS);
+        document.getElementById("name").value="";
+        console.log(Name_array);
+    }
+
+    function GetInput()
+    {
+        let Rollnum=parseInt(document.getElementById("rnum").value);
+
+        for(i=0;i<Name_array.length;i++)
+    {
+        if(i+1==Rollnum)
+    {
+        document.getElementById("show").innerHTML=Name_array[i]
+    }
+    }
+        
+    }
+    
+    
+
+
+
+</script>
+</html>

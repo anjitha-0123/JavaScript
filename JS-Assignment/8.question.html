@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label>Name of Subject : </label>
+   <select id="sub">
+    <option>Mathematics</option>
+    <option>Science</option>
+    <option>Language</option>
+    <option>Computer</option>
+   </select>
+    <label>Mark : </label>
+    <input type="number" min="1" max="100" id="mark">
+    <button onclick="submission()">Submit</button>
+    <ul id="list"></ul>
+</body>
+<script>
+    subject=[];
+    mark=[];
+    function submission()
+    {
+        let subject1=document.getElementById("sub").value;
+        let mark1=parseInt(document.getElementById("mark").value);
+        subject.push(subject1);
+        mark.push(mark1);
+        
+        if (mark1 > 90) 
+            {
+               document.getElementById("list").innerHTML = "A+";
+            } 
+        else if (mark1 <= 90 && mark1 > 80)
+           {
+              document.getElementById("list").innerHTML = "A";
+           } 
+        else if (mark1 <= 80 && mark1 > 70) 
+          {
+              document.getElementById("list").innerHTML = "B+";
+          } 
+          else if (mark1 <= 70 && mark1 > 60) 
+          {
+              document.getElementById("list").innerHTML = "C+";
+          } 
+          else if (mark1 <= 60 && mark1 >= 50) 
+          {
+             document.getElementById("list").innerHTML = "C";
+          } 
+          else 
+          {
+             alert("Invalid Input");
+          }
+
+  
+  
+       document.getElementById("mark").value="";
+    }
+</script>
+</html>
